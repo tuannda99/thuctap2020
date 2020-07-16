@@ -7,15 +7,13 @@ public class Main {
 
     public static News news;
     public static Scanner scan;
-    public static ArrayList<News> array;
+    public static ArrayList<News> array = new ArrayList<>();
 
     public static void menu(){
-
         System.out.println("1-Insert news");
         System.out.println("2-View list news");
         System.out.println("3-Average rate");
         System.out.println("4-Exit");
-
     }
 
     public static void fun1(){
@@ -36,17 +34,20 @@ public class Main {
         news.rateList[0] = scan.nextInt();
         news.rateList[1] = scan.nextInt();
         news.rateList[2] = scan.nextInt();
-        array = new ArrayList();
         array.add(news);
     }
 
     public static void fun2(){
-        array.get(0).display();
+        for(int i=0;i< array.size();i++){
+            array.get(i).display();
+        }
     }
 
     public static void fun3(){
-        array.get(0).calculate();
-        array.get(0).display();
+        for(int i=0;i< array.size();i++){
+            array.get(i).calculate();
+            array.get(i).display();
+        }
     }
 
 
@@ -74,6 +75,5 @@ public class Main {
                     break;
             }
         }
-
     }
 }
