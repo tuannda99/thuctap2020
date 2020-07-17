@@ -8,7 +8,7 @@ public class StreamDemo {
     List<Integer> numbers = Arrays.asList(7,2,5,4,2,1);
 
     public void withoutStream(){
-        long count = 1;
+        long count = 0;
         for(Integer number : numbers) {
             if (number % 2 == 0) {
                 count++;
